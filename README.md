@@ -66,6 +66,7 @@ VoltSight is a web-based interactive dashboard that predicts electricity demand 
 
 ```bash
 git clone https://github.com/Mxneeb/VoltSight-Electricity-Demand-Forecasting
+cd VoltSight-Electricity-Demand-Forecasting
 ```
 
 ### 2. Install Dependencies
@@ -74,30 +75,44 @@ git clone https://github.com/Mxneeb/VoltSight-Electricity-Demand-Forecasting
 pip install -r requirements.txt
 ```
 
-> To generate `requirements.txt`:
+> To generate `requirements.txt` from your environment:
 ```bash
 pip freeze > requirements.txt
 ```
 
-### 3. Train Models
+### 3. Run Preprocessing
+
+Open and run the Jupyter Notebook to clean and engineer the raw dataset:
+
+```bash
+jupyter notebook preprocessing.ipynb
+```
+
+This will generate a cleaned dataset named `preprocessed_data2.csv`, required for training.
+
+### 4. Train Models
 
 ```bash
 python predictive_modeling.py
 ```
 
-This prepares the data, trains models (both global and city-specific), and saves them to the `models/` directory.
+This will:
+- Load the cleaned dataset (`preprocessed_data2.csv`)
+- Train global and city-specific machine learning models
+- Save them to the `models/` directory
 
-### 4. Launch the Dashboard
+### 5. Launch the Dashboard
 
 ```bash
 streamlit run frontend.py
 ```
 
----
+This will start the **VoltSight** interactive dashboard in your browser.
+
 
 ## 📸 Screenshots 
 
-![Screenshot 2025-05-28 050706](https://github.com/user-attachments/assets/7c41e49c-fb2e-4202-9fd8-c16267a76185)
+![Screenshot 2025-05-28 051253](https://github.com/user-attachments/assets/2495b74c-d3e2-4490-bbab-259576e315b7)
 ![Screenshot 2025-05-28 050754](https://github.com/user-attachments/assets/d8958baa-0b2a-4cc8-bc12-d75a562f5f29)
 ![Screenshot 2025-05-28 050829](https://github.com/user-attachments/assets/35b35fca-0cf5-4ce7-ba73-74d68af551bd)
 ![Screenshot 2025-05-28 050839](https://github.com/user-attachments/assets/30ec981a-550f-4677-944e-8a2af0ae7c42)
