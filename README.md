@@ -59,6 +59,15 @@ VoltSight is a web-based interactive dashboard that predicts electricity demand 
 ```
 
 ---
+## 📦 Dataset
+
+This project uses electricity demand and weather data from the following Kaggle dataset:
+
+🔗 [US Top 10 Cities - Electricity and Weather Data](https://www.kaggle.com/datasets/shubhamkulkarni01/us-top-10-cities-electricity-and-weather-data?select=EIA930_BALANCE_2018_Jul_Dec.csv)  
+Provided by **Shubham Kulkarni** on Kaggle. The dataset includes hourly electricity demand and weather conditions for 10 major US cities.
+
+> Ensure you download and preprocess the dataset using the `preprocessing.ipynb` notebook before training models.
+---
 
 ## 🚀 Getting Started
 
